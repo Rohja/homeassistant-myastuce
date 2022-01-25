@@ -1,0 +1,10 @@
+{
+    "domain": "my_astuce_rouen",
+    "name": "My Asture Rouen",
+    "documentation": "https://github.com/Rohja/homeassistant-myastuce",
+    "dependencies": [],
+    "codeowners": ["@Rohja"],
+    "requirements": ["pymyastuce>=0.0.3",],
+    "iot_class": "local_polling",
+    "version": "0.1.0"
+  }
