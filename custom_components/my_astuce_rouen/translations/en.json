@@ -17,9 +17,9 @@
                 "data": {
                     "username": "Username",
                     "password": "Password"
-                }
-            },
-            "description": "Chose which MyAstuce line/station to track."
+                },
+                "description": "Chose which MyAstuce line/station to track."
+            }
         }
     }
 }
