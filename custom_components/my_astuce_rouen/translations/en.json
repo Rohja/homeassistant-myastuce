@@ -1,0 +1,25 @@
+{
+    "config": {
+        "abort": {
+            "already_configured": "Device is already configured",
+            "already_in_progress": "Configuration flow is already in progress",
+            "reauth_successful": "Re-authentication was successful"
+        },
+        "error": {
+            "connection_error": "Can't connect to ESP. Please make sure your YAML file contains an 'api:' line.",
+            "invalid_auth": "Invalid authentication",
+            "invalid_psk": "The transport encryption key is invalid. Please ensure it matches what you have in your configuration",
+            "resolve_error": "Can't resolve address of the ESP. If this error persists, please set a static IP address: https://esphomelib.com/esphomeyaml/components/wifi.html#manual-ips"
+        },
+        "flow_title": "{name}",
+        "step": {
+            "user": {
+                "data": {
+                    "username": "Username",
+                    "password": "Password"
+                }
+            },
+            "description": "Chose which MyAstuce line/station to track."
+        }
+    }
+}
