@@ -43,7 +43,7 @@ CONFIG_SCHEMA = vol.Schema(
 def setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Set up a skeleton component."""
     # States are in the format DOMAIN.OBJECT_ID.
-    _LOGGER.info("Config:", config)
+    _LOGGER.info(config)
     hass.states.set('my_astuce_rouen.Hello_World', 'Works!')
 
     # Return boolean to indicate that initialization was successfully.
