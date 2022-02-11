@@ -36,8 +36,8 @@ CONFIG_SCHEMA = vol.Schema({
         vol.Optional(CONF_LINES_NAME, default={}): vol.All(
             cv.ensure_list, [LINE_STOP_SCHEMA]
         )
-    })
-})
+    }),
+}, extra=vol.ALLOW_EXTRA)
 
 def setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Set up a skeleton component."""
