@@ -18,26 +18,27 @@ from homeassistant.helpers.typing import ConfigType
 DOMAIN = "my_astuce_rouen"
 _LOGGER = logging.getLogger(__name__)
 
-CONF_LINES_NAME = "lines"
 CONF_LINE_NAME = "line"
 CONF_STATION_NAME = "station"
 CONF_LINE_DIRECTION = "direction"
 
-LINE_STOP_SCHEMA = vol.Schema(
+CONFIG_SCHEMA = vol.Schema(
     {
-        vol.Required(CONF_LINE_NAME): cv.string,
-        vol.Required(CONF_STATION_NAME): cv.string,
-        vol.Required(CONF_LINE_DIRECTION): vol.All(vol.Coerce(int), vol.Range(min=1, max=2))
-    }
-)
-
-CONFIG_SCHEMA = vol.Schema({
-    DOMAIN: vol.Schema({
-        vol.Optional(CONF_LINES_NAME, default={}): vol.All(
-            cv.ensure_list, [LINE_STOP_SCHEMA]
+        DOMAIN: vol.All(
+            cv.ensure_list,
+            [
+                vol.Schema(
+                    {
+                        vol.Required(CONF_LINE_NAME): cv.string,
+                        vol.Required(CONF_STATION_NAME): cv.string,
+                        vol.Required(CONF_LINE_DIRECTION): vol.All(vol.Coerce(int), vol.Range(min=1, max=2))
+                    }
+                )
+            ],
         )
-    }),
-}, extra=vol.ALLOW_EXTRA)
+    },
+    extra=vol.ALLOW_EXTRA,
+)
 
 def setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Set up a skeleton component."""
