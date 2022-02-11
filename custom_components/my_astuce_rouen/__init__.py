@@ -26,8 +26,8 @@ CONF_LINE_DIRECTION = "direction"
 LINE_STOP_SCHEMA = vol.Schema(
     {
         vol.Required(CONF_LINE_NAME): cv.string,
-        vol.Required(CONF_LINE_NAME): cv.string,
-        vol.Required(CONF_LINE_NAME): vol.All(vol.Coerce(int), vol.Range(min=1, max=2))
+        vol.Required(CONF_STATION_NAME): cv.string,
+        vol.Required(CONF_LINE_DIRECTION): vol.All(vol.Coerce(int), vol.Range(min=1, max=2))
     }
 )
 
