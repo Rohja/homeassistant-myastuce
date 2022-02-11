@@ -7,5 +7,5 @@
     "requirements": ["pymyastuce>=0.0.3"],
     "iot_class": "local_polling",
     "version": "0.1.0",
-    "config_flow": true
+    "config_flow": false
   }
