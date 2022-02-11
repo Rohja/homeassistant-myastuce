@@ -1,6 +1,6 @@
 {
     "domain": "my_astuce_rouen",
-    "name": "My Asture Rouen",
+    "name": "My Astuce Rouen",
     "documentation": "https://github.com/Rohja/homeassistant-myastuce",
     "dependencies": [],
     "codeowners": ["@Rohja"],
